@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Tk, NORMAL, END, DISABLED, LabelFrame, Canvas, Label, Entry, StringVar, OptionMenu, Frame, Button, RIDGE, NW
 from tkinter import filedialog
 from PIL import Image, ImageTk
 from tkinter import messagebox
