@@ -11,7 +11,6 @@ root = Tk()
 root.title('Image Resize')
 root.resizable(False, False)
 
-
 file_name = None
 render_in = None
 load_in = None
@@ -75,7 +74,6 @@ def convertor():
     global render_out
     render_out = ImageTk.PhotoImage(img_process.new_img)
     img_out_cnvs.itemconfigure(img_out_area, image=render_out)
-    email_btn.configure(state=NORMAL)
     open_folder_btn.configure(state=NORMAL)
     status.configure(text=f'Saved to {directory}')
 
@@ -92,7 +90,6 @@ def reset():
     size_w_txt.delete(0, END)
     format_out_txt.configure(state=DISABLED)
     convert_btn.configure(state=DISABLED)
-    email_btn.configure(state=DISABLED)
     open_folder_btn.configure(state=DISABLED)
     reset_btn.configure(state=DISABLED)
 
@@ -160,9 +157,6 @@ btn_out_frame.grid(row=5, column=1, pady=20)
 
 convert_btn = Button(btn_out_frame, text='Convert', state=DISABLED, command=convertor)
 convert_btn.grid(row=0, column=0)
-
-email_btn = Button(btn_out_frame, text='Email', state=NORMAL)
-email_btn.grid(row=0, column=1)
 
 open_folder_btn = Button(btn_out_frame, text='Open folder', state=DISABLED, command=open_folder)
 open_folder_btn.grid(row=0, column=2)
