@@ -35,7 +35,7 @@ make_dir()
 def open_file():
     
     global file_name
-    file_name = filedialog.askopenfilename(initialdir=f'/home/{user}', title = 'Select image', filetypes=(('Images' , '*.jpeg *.jpg *.png *.bmp'),('All files','*.*')))
+    file_name = filedialog.askopenfilename(initialdir=f'/home/{user}', title = 'Select image', filetypes=(('Images' , '*.jpeg *.jpg *.JPG *.JPEG *.png *.bmp'),('All files','*.*')))
     if file_name is not None:
         try:
             print (file_name)
