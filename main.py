@@ -79,28 +79,6 @@ def convertor():
     open_folder_btn.configure(state=NORMAL)
     status.configure(text=f'Saved to {directory}')
 
-def email():
-    
-    def send():
-        mail_address = usr_mail.get()
-        send_email.sender(mail_address)
-    
-    mail_window = Toplevel()
-    mail_window.resizable(False, False)
-    mail_window.title('Mail')
-    
-    enter_mail = Label(mail_window, text='Enter your email')
-    enter_mail.grid(row=0, column=0)
-    
-    usr_mail = Entry(mail_window, width=30)
-    usr_mail.grid(row=1,column=0, padx=20, pady=10)
-
-    send_btn = Button(mail_window, text='Send', command=send)
-    send_btn.grid(row=2, column=0, pady=10)
-
-    
-    
-
 def open_folder():
     webbrowser.open(directory)
 
@@ -183,7 +161,7 @@ btn_out_frame.grid(row=5, column=1, pady=20)
 convert_btn = Button(btn_out_frame, text='Convert', state=DISABLED, command=convertor)
 convert_btn.grid(row=0, column=0)
 
-email_btn = Button(btn_out_frame, text='Email', state=NORMAL, command=email)
+email_btn = Button(btn_out_frame, text='Email', state=NORMAL)
 email_btn.grid(row=0, column=1)
 
 open_folder_btn = Button(btn_out_frame, text='Open folder', state=DISABLED, command=open_folder)
