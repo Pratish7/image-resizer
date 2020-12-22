@@ -6,8 +6,6 @@ import webbrowser
 import os
 import getpass
 import img_process
-import send_email
-
 
 root = Tk()
 root.title('Image Resize')
